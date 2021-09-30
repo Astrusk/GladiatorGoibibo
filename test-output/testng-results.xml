@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5394" started-at="2021-09-30T11:07:12Z" finished-at="2021-09-30T11:07:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5394" started-at="2021-09-30T11:07:12Z" finished-at="2021-09-30T11:07:17Z">
+      <class name="loginTs.loginTC">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:loginTs.loginTC@6b26e945]" name="beforeTest" is-config="true" duration-ms="1385" started-at="2021-09-30T11:07:12Z" finished-at="2021-09-30T11:07:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testUrl()[pri:0, instance:loginTs.loginTC@6b26e945]" name="testUrl" duration-ms="2662" started-at="2021-09-30T11:07:13Z" finished-at="2021-09-30T11:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUrl -->
+        <test-method status="PASS" signature="TC01()[pri:0, instance:loginTs.loginTC@6b26e945]" name="TC01" duration-ms="662" started-at="2021-09-30T11:07:16Z" depends-on-methods="loginTs.loginTC.testUrl" finished-at="2021-09-30T11:07:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01 -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:loginTs.loginTC@6b26e945]" name="afterTest" is-config="true" duration-ms="665" started-at="2021-09-30T11:07:17Z" finished-at="2021-09-30T11:07:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- loginTs.loginTC -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
