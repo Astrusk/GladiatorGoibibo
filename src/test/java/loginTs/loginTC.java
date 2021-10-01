@@ -3,8 +3,6 @@ import Base.base;
 import login.*;
 import url.Url;
 
-import org.openqa.selenium.By;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class loginTC extends base{
@@ -19,7 +17,7 @@ public class loginTC extends base{
 	
   @Test(dependsOnMethods = "testUrl")
   public void TC01() throws Exception {
-	  
+	  driver.manage().window().maximize();
 	  loginElements e = new loginElements(driver);
 	  loginCredentials cred = new loginCredentials();
 	  String num = cred.getValidno();

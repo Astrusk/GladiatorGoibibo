@@ -1,29 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5394" started-at="2021-09-30T11:07:12Z" finished-at="2021-09-30T11:07:17Z">
+  <suite name="Default suite" duration-ms="20649" started-at="2021-10-01T05:07:19Z" finished-at="2021-10-01T05:07:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5394" started-at="2021-09-30T11:07:12Z" finished-at="2021-09-30T11:07:17Z">
-      <class name="loginTs.loginTC">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:loginTs.loginTC@6b26e945]" name="beforeTest" is-config="true" duration-ms="1385" started-at="2021-09-30T11:07:12Z" finished-at="2021-09-30T11:07:13Z">
+    <test name="Default test" duration-ms="20649" started-at="2021-10-01T05:07:19Z" finished-at="2021-10-01T05:07:39Z">
+      <class name="tsOneWayFlight.oneWayFlightTC">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="beforeTest" is-config="true" duration-ms="1391" started-at="2021-10-01T05:07:19Z" finished-at="2021-10-01T05:07:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="testUrl()[pri:0, instance:loginTs.loginTC@6b26e945]" name="testUrl" duration-ms="2662" started-at="2021-09-30T11:07:13Z" finished-at="2021-09-30T11:07:16Z">
+        <test-method status="PASS" signature="testUrl()[pri:1, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="testUrl" duration-ms="2647" started-at="2021-10-01T05:07:20Z" finished-at="2021-10-01T05:07:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUrl -->
-        <test-method status="PASS" signature="TC01()[pri:0, instance:loginTs.loginTC@6b26e945]" name="TC01" duration-ms="662" started-at="2021-09-30T11:07:16Z" depends-on-methods="loginTs.loginTC.testUrl" finished-at="2021-09-30T11:07:17Z">
+        <test-method status="PASS" signature="TC18()[pri:2, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC18" duration-ms="283" started-at="2021-10-01T05:07:23Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.testUrl" finished-at="2021-10-01T05:07:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC01 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:loginTs.loginTC@6b26e945]" name="afterTest" is-config="true" duration-ms="665" started-at="2021-09-30T11:07:17Z" finished-at="2021-09-30T11:07:17Z">
+        </test-method> <!-- TC18 -->
+        <test-method status="PASS" signature="TC19()[pri:3, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC19" duration-ms="647" started-at="2021-10-01T05:07:23Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC18" finished-at="2021-10-01T05:07:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC19 -->
+        <test-method status="PASS" signature="TC20()[pri:4, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC20" duration-ms="449" started-at="2021-10-01T05:07:24Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC19" finished-at="2021-10-01T05:07:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC20 -->
+        <test-method status="PASS" signature="TC23()[pri:5, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC23" duration-ms="2673" started-at="2021-10-01T05:07:24Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC20" finished-at="2021-10-01T05:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC23 -->
+        <test-method status="PASS" signature="TC24()[pri:6, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC24" duration-ms="202" started-at="2021-10-01T05:07:27Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC23" finished-at="2021-10-01T05:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC24 -->
+        <test-method status="PASS" signature="TC25()[pri:7, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC25" duration-ms="220" started-at="2021-10-01T05:07:27Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC24" finished-at="2021-10-01T05:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC25 -->
+        <test-method status="PASS" signature="TC26()[pri:7, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC26" duration-ms="308" started-at="2021-10-01T05:07:27Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC25" finished-at="2021-10-01T05:07:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC26 -->
+        <test-method status="PASS" signature="TC27()[pri:8, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC27" duration-ms="267" started-at="2021-10-01T05:07:28Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC26" finished-at="2021-10-01T05:07:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC27 -->
+        <test-method status="PASS" signature="TC28()[pri:9, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC28" duration-ms="272" started-at="2021-10-01T05:07:28Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC27" finished-at="2021-10-01T05:07:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC28 -->
+        <test-method status="PASS" signature="TC29()[pri:10, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC29" duration-ms="242" started-at="2021-10-01T05:07:28Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC28" finished-at="2021-10-01T05:07:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC29 -->
+        <test-method status="PASS" signature="TC30()[pri:11, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="TC30" duration-ms="10369" started-at="2021-10-01T05:07:28Z" depends-on-methods="tsOneWayFlight.oneWayFlightTC.TC29" finished-at="2021-10-01T05:07:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC30 -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:tsOneWayFlight.oneWayFlightTC@63a65a25]" name="afterTest" is-config="true" duration-ms="654" started-at="2021-10-01T05:07:39Z" finished-at="2021-10-01T05:07:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- loginTs.loginTC -->
+      </class> <!-- tsOneWayFlight.oneWayFlightTC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

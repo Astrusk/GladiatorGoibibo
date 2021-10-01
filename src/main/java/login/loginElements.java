@@ -23,13 +23,6 @@ public class loginElements {
 	public void clickLogin() {
 		driver.findElement(e_loginButton).click();
 	}
-	/*public void doLogin(String user,String pwd) {
-		setUserName(user);
-		setPassword(pwd);
-		clickLogin();
-	}
-	public void clickForget() {
-		driver.findElement(e_forget).click();
-		*/
-	}
+
+}
 
