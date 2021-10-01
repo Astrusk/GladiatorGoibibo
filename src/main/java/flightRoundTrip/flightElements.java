@@ -1,4 +1,4 @@
-package flightOneWay;
+package flightRoundTrip;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,6 +16,7 @@ public class flightElements {
 		this.driver = driver;
 	}
 
+	By e_round = By.xpath("//span[@id='roundTrip']");
 	By e_from = By.xpath("//input[@id='gosuggest_inputSrc']");
 	By e_to = By.xpath("//input[@id='gosuggest_inputDest']");
 	By e_search = By.xpath("//button[normalize-space()='SEARCH']");
@@ -33,7 +34,12 @@ public class flightElements {
 	By e_mail = By.xpath("//input[@placeholder='Email']");
 	By e_num = By.xpath("//input[@placeholder='Mobile No']");
 	By e_pay = By.xpath("//button[normalize-space()='Proceed To Payment']");
-
+	
+	public void clickRound() {
+		driver.findElement(e_round).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+		
 	public void setFrom(String from) {
 		driver.findElement(e_from).clear();
 		driver.findElement(e_from).sendKeys(from);
@@ -121,16 +127,16 @@ public class flightElements {
 	public void setMail(String mail) {
 		driver.findElement(e_mail).clear();
 		driver.findElement(e_mail).sendKeys(mail);
-		
 	}
 
 	public void setNum(String num) {
 		driver.findElement(e_num).clear();
 		driver.findElement(e_num).sendKeys(num);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+
 	}
 
 	public void clickPtopay() {
 		driver.findElement(e_pay).click();
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 }

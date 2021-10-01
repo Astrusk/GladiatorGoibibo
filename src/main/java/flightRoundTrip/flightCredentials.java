@@ -1,4 +1,4 @@
-package flightOneWay;
+package flightRoundTrip;
 
 import java.util.*;
 import java.io.*;
@@ -60,5 +60,4 @@ public class flightCredentials {
 		String n = prop.getProperty("title");
 		return n;
 	}
-	
 }

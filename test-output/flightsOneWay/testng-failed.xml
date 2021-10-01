@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [flightsOneWay]">
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="tsOneWayFlight.oneWayFlightPassengers">
+        <methods>
+          <include name="afterTest"/>
+          <include name="TC21"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tsOneWayFlight.oneWayFlightPassengers -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="tsOneWayFlight.Passengers2">
+        <methods>
+          <include name="afterTest"/>
+          <include name="TC22"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tsOneWayFlight.Passengers2 -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" name="Test3(failed)">
+    <classes>
+      <class name="tsOneWayFlight.oneWayFlightTC">
+        <methods>
+          <include name="testUrl"/>
+          <include name="TC20"/>
+          <include name="TC24"/>
+          <include name="TC30"/>
+          <include name="TC25"/>
+          <include name="TC28"/>
+          <include name="TC23"/>
+          <include name="TC26"/>
+          <include name="afterTest"/>
+          <include name="TC18"/>
+          <include name="TC29"/>
+          <include name="TC27"/>
+          <include name="TC19"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tsOneWayFlight.oneWayFlightTC -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [flightsOneWay] -->

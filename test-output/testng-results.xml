@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6153" started-at="2021-10-01T05:43:03Z" finished-at="2021-10-01T05:43:10Z">
+  <suite name="Default suite" duration-ms="9284" started-at="2021-10-01T07:40:07Z" finished-at="2021-10-01T07:40:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6153" started-at="2021-10-01T05:43:03Z" finished-at="2021-10-01T05:43:10Z">
-      <class name="tsOneWayFlight.oneWayFlightPassengers">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:tsOneWayFlight.oneWayFlightPassengers@6b26e945]" name="beforeTest" is-config="true" duration-ms="1414" started-at="2021-10-01T05:43:03Z" finished-at="2021-10-01T05:43:05Z">
+    <test name="Default test" duration-ms="9284" started-at="2021-10-01T07:40:07Z" finished-at="2021-10-01T07:40:17Z">
+      <class name="tsOneWayFlight.Passengers2">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:tsOneWayFlight.Passengers2@309e345f]" name="beforeTest" is-config="true" duration-ms="4128" started-at="2021-10-01T07:40:07Z" finished-at="2021-10-01T07:40:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TC21()[pri:0, instance:tsOneWayFlight.oneWayFlightPassengers@6b26e945]" name="TC21" duration-ms="4022" started-at="2021-10-01T05:43:05Z" finished-at="2021-10-01T05:43:09Z">
+        <test-method status="PASS" signature="TC22()[pri:0, instance:tsOneWayFlight.Passengers2@309e345f]" name="TC22" duration-ms="4272" started-at="2021-10-01T07:40:11Z" description="Testing with Infants more than Adults" finished-at="2021-10-01T07:40:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC21 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:tsOneWayFlight.oneWayFlightPassengers@6b26e945]" name="afterTest" is-config="true" duration-ms="700" started-at="2021-10-01T05:43:09Z" finished-at="2021-10-01T05:43:10Z">
+        </test-method> <!-- TC22 -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:tsOneWayFlight.Passengers2@309e345f]" name="afterTest" is-config="true" duration-ms="866" started-at="2021-10-01T07:40:16Z" finished-at="2021-10-01T07:40:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- tsOneWayFlight.oneWayFlightPassengers -->
+      </class> <!-- tsOneWayFlight.Passengers2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
