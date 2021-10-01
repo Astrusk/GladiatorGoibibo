@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class Passengers2 extends base {
 
-	@Test
+	@Test(description = "Testing with Infants more than Adults")
 	public void TC22() throws Exception {
 
 		Url u = new Url();
@@ -19,11 +19,7 @@ public class Passengers2 extends base {
 		driver.manage().window().maximize();
 
 		flightElements e = new flightElements(driver);
-		flightCredentials cred = new flightCredentials();
 
-		e.setFrom(cred.getFromCity());
-		e.setTo(cred.getToCity());
-		e.setDep();
 		e.clickPax();
 		e.setInfant(3);
 

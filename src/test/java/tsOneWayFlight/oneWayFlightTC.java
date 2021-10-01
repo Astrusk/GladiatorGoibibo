@@ -3,10 +3,7 @@ package tsOneWayFlight;
 import Base.*;
 import url.*;
 import flightOneWay.*;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -21,7 +18,7 @@ public class oneWayFlightTC extends base {
 		driver.get(site);
   }
   
-  @Test(priority = 2, dependsOnMethods="testUrl")
+  @Test(priority = 2, dependsOnMethods="testUrl", description = "Testing One Way Flight with no From and no Destination")
   public void TC18() throws Exception{
 	  driver.manage().window().maximize();
 	  
@@ -34,7 +31,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertEquals(actual, "Please enter a valid Source");
   }
   
-  @Test(priority = 3, dependsOnMethods="TC18")
+  @Test(priority = 3, dependsOnMethods="TC18", description = "Testing One Way Flight with Valid From and no Destination")
   public void TC19() throws Exception{
 	  driver.manage().window().maximize();
 	  
@@ -50,7 +47,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertEquals(actual, "Please enter a valid Destination");
   }
   
-  @Test(priority = 4, dependsOnMethods="TC19")
+  @Test(priority = 4, dependsOnMethods="TC19", description = "Testing One Way Flight if no valid date")
   public void TC20() throws Exception{
 	  
 	  driver.manage().window().maximize();
@@ -67,7 +64,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertEquals(actual, "Please enter a valid departure date");
   }
   
-  @Test(priority=5, dependsOnMethods="TC20")
+  @Test(priority=5, dependsOnMethods="TC20", description = "Booking Flight without selecting Insurance options" )
   public void TC23() throws Exception{
 
 	  driver.manage().window().maximize();
@@ -85,7 +82,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertTrue(x);
   }
   
-  @Test(priority=6, dependsOnMethods="TC23")
+  @Test(priority=6, dependsOnMethods="TC23", description = "Booking Flight without entering First or Middle Name")
   public void TC24() throws Exception{
 	  flightElements e = new flightElements(driver);
 		 
@@ -97,7 +94,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertTrue(x);
   }
   
-  @Test(priority=7, dependsOnMethods="TC24")
+  @Test(priority=7, dependsOnMethods="TC24", description = "Booking Flight without selecting Title")
   public void TC25() throws Exception{
 	  flightElements e = new flightElements(driver);
 	  flightCredentials cred = new flightCredentials();
@@ -110,7 +107,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertTrue(x);
   }
   
-  @Test(priority=7, dependsOnMethods="TC25")
+  @Test(priority=7, dependsOnMethods="TC25", description = "Booking Flight without entering Email")
   public void TC26() throws Exception{
 	  flightElements e = new flightElements(driver);
 	  flightCredentials cred = new flightCredentials();
@@ -123,7 +120,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertTrue(x);
   }
   
-  @Test(priority=8, dependsOnMethods="TC26")
+  @Test(priority=8, dependsOnMethods="TC26", description = "Booking Flight with invalid email")
   public void TC27() throws Exception{
 	  flightElements e = new flightElements(driver);
 	  flightCredentials cred = new flightCredentials();
@@ -136,7 +133,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertTrue(x);
   }
   
-  @Test(priority=9, dependsOnMethods="TC27")
+  @Test(priority=9, dependsOnMethods="TC27", description = "Booking Flight with No Number")
   public void TC28() throws Exception{
 	  flightElements e = new flightElements(driver);
 	  flightCredentials cred = new flightCredentials();
@@ -149,7 +146,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertTrue(x);
   }
   
-  @Test(priority=10, dependsOnMethods="TC28")
+  @Test(priority=10, dependsOnMethods="TC28", description = "Booking Flight with invalid Number")
   public void TC29() throws Exception{
 	  flightElements e = new flightElements(driver);
 	  flightCredentials cred = new flightCredentials();
@@ -162,7 +159,7 @@ public class oneWayFlightTC extends base {
 	  Assert.assertEquals(err, "Please enter a valid mobile number");
   }
   
-  @Test(priority=11, dependsOnMethods="TC29")
+  @Test(priority=11, dependsOnMethods="TC29", description = "Booking Flight with valid Number")
   public void TC30() throws Exception{
 	  flightElements e = new flightElements(driver);
 	  flightCredentials cred = new flightCredentials();
@@ -171,16 +168,13 @@ public class oneWayFlightTC extends base {
 	  
 	  WebDriverWait wait = new WebDriverWait(driver,30);
 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Base Fare']")));
-	  
-	  //Assert.assertTrue(driver.findElement(By.xpath("//span[normalize-space()='Base Fare']")).isDisplayed());;
-	  
+	  	  
 	  e.clickProceed();
 	  e.clickPtopay();
 	  
 	  boolean x = driver.findElement(By.xpath("//div[contains(@class,'fr mobdn')]//img")).isDisplayed();
 	  
-	  Assert.assertTrue(x);
-	  
+	  Assert.assertTrue(x); 
   }
   
 }

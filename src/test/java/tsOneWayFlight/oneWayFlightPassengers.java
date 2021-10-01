@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class oneWayFlightPassengers extends base {
 
-	@Test
+	@Test(description = "Testing with more than 9 passengers")
 	public void TC21() throws Exception {
 
 		Url u = new Url();
@@ -20,11 +20,7 @@ public class oneWayFlightPassengers extends base {
 		driver.manage().window().maximize();
 
 		flightElements e = new flightElements(driver);
-		flightCredentials cred = new flightCredentials();
 
-		e.setFrom(cred.getFromCity());
-		e.setTo(cred.getToCity());
-		e.setDep();
 		e.clickPax();
 		e.setAdult(9);
 		e.setChild(2);
