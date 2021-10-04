@@ -1,69 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="hotelBooking" duration-ms="20828" started-at="2021-10-04T04:36:36Z" finished-at="2021-10-04T04:36:56Z">
+  <suite name="SignUp" duration-ms="47041" started-at="2021-10-04T14:38:25Z" finished-at="2021-10-04T14:39:12Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="20828" started-at="2021-10-04T04:36:36Z" finished-at="2021-10-04T04:36:56Z">
-      <class name="hotelTS.hotelTC">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:hotelTS.hotelTC@56a6d5a6]" name="beforeTest" is-config="true" duration-ms="1444" started-at="2021-10-04T04:36:36Z" finished-at="2021-10-04T04:36:37Z">
+    <test name="Test" duration-ms="47041" started-at="2021-10-04T14:38:25Z" finished-at="2021-10-04T14:39:12Z">
+      <class name="signUpTS.signUpTC">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:signUpTS.signUpTC@56a6d5a6]" name="beforeTest" is-config="true" duration-ms="1473" started-at="2021-10-04T14:38:25Z" finished-at="2021-10-04T14:38:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="Url1()[pri:1, instance:hotelTS.hotelTC@56a6d5a6]" name="Url1" duration-ms="2869" started-at="2021-10-04T04:36:37Z" finished-at="2021-10-04T04:36:40Z">
+        <test-method status="PASS" signature="testUrl()[pri:0, instance:signUpTS.signUpTC@56a6d5a6]" name="testUrl" duration-ms="2915" started-at="2021-10-04T14:38:26Z" finished-at="2021-10-04T14:38:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Url1 -->
-        <test-method status="PASS" signature="withoutEnteringLocation()[pri:2, instance:hotelTS.hotelTC@56a6d5a6]" name="withoutEnteringLocation" duration-ms="1588" started-at="2021-10-04T04:36:40Z" description="Without entering Location" depends-on-methods="hotelTS.hotelTC.Url1" finished-at="2021-10-04T04:36:42Z">
+        </test-method> <!-- testUrl -->
+        <test-method status="PASS" signature="NoNumber()[pri:1, instance:signUpTS.signUpTC@56a6d5a6]" name="NoNumber" duration-ms="523" started-at="2021-10-04T14:38:29Z" description="Testing Signup page without entering a number " depends-on-methods="signUpTS.signUpTC.testUrl" finished-at="2021-10-04T14:38:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- withoutEnteringLocation -->
-        <test-method status="PASS" signature="testingSearchPageWithNoRooms()[pri:3, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithNoRooms" duration-ms="3515" started-at="2021-10-04T04:36:42Z" description="Testing Search page with no rooms" depends-on-methods="hotelTS.hotelTC.withoutEnteringLocation" finished-at="2021-10-04T04:36:45Z">
+        </test-method> <!-- NoNumber -->
+        <test-method status="PASS" signature="Invalid10Digit()[pri:2, instance:signUpTS.signUpTC@56a6d5a6]" name="Invalid10Digit" duration-ms="570" started-at="2021-10-04T14:38:30Z" description="Testing Signup page with invalid non10digit number " depends-on-methods="signUpTS.signUpTC.NoNumber" finished-at="2021-10-04T14:38:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testingSearchPageWithNoRooms -->
-        <test-method status="PASS" signature="testingSearchPageWithNoAdults()[pri:4, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithNoAdults" duration-ms="140" started-at="2021-10-04T04:36:45Z" description="Testing Search page with no adults" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithNoRooms" finished-at="2021-10-04T04:36:45Z">
+        </test-method> <!-- Invalid10Digit -->
+        <test-method status="PASS" signature="InvalidNumberAlphabets()[pri:3, instance:signUpTS.signUpTC@56a6d5a6]" name="InvalidNumberAlphabets" duration-ms="651" started-at="2021-10-04T14:38:30Z" description="Testing Signup page with invalid number containing alphabets" depends-on-methods="signUpTS.signUpTC.Invalid10Digit" finished-at="2021-10-04T14:38:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testingSearchPageWithNoAdults -->
-        <test-method status="PASS" signature="testingSearchPageWithMaxRooms()[pri:5, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithMaxRooms" duration-ms="2810" started-at="2021-10-04T04:36:45Z" description="Testing Search page with max rooms" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithNoAdults" finished-at="2021-10-04T04:36:48Z">
+        </test-method> <!-- InvalidNumberAlphabets -->
+        <test-method status="PASS" signature="InvalidNumberSpecialChar()[pri:4, instance:signUpTS.signUpTC@56a6d5a6]" name="InvalidNumberSpecialChar" duration-ms="464" started-at="2021-10-04T14:38:31Z" description="Testing Signup page with invalid number containing special characters" depends-on-methods="signUpTS.signUpTC.testUrl" finished-at="2021-10-04T14:38:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testingSearchPageWithMaxRooms -->
-        <test-method status="PASS" signature="testingSearchPageWithMoreThan16Adults()[pri:6, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithMoreThan16Adults" duration-ms="608" started-at="2021-10-04T04:36:48Z" description="Testing Search page with more than 16 adults" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithMaxRooms" finished-at="2021-10-04T04:36:49Z">
+        </test-method> <!-- InvalidNumberSpecialChar -->
+        <test-method status="PASS" signature="InvalidNumber()[pri:5, instance:signUpTS.signUpTC@56a6d5a6]" name="InvalidNumber" duration-ms="491" started-at="2021-10-04T14:38:31Z" description="Testing Signup page with invalid number " depends-on-methods="signUpTS.signUpTC.testUrl" finished-at="2021-10-04T14:38:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testingSearchPageWithMoreThan16Adults -->
-        <test-method status="PASS" signature="childLimit()[pri:7, instance:hotelTS.hotelTC@56a6d5a6]" name="childLimit" duration-ms="107" started-at="2021-10-04T04:36:49Z" description="child limit" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithMoreThan16Adults" finished-at="2021-10-04T04:36:49Z">
+        </test-method> <!-- InvalidNumber -->
+        <test-method status="PASS" signature="InvalidOTP()[pri:6, instance:signUpTS.signUpTC@56a6d5a6]" name="InvalidOTP" duration-ms="13545" started-at="2021-10-04T14:38:32Z" description="Testing Sign up page with Valid number and invalid OTP" depends-on-methods="signUpTS.signUpTC.testUrl" finished-at="2021-10-04T14:38:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- childLimit -->
-        <test-method status="PASS" signature="testingSearchPageWithValidDetails()[pri:8, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithValidDetails" duration-ms="491" started-at="2021-10-04T04:36:49Z" description="Testing Search page with valid details" depends-on-methods="hotelTS.hotelTC.childLimit" finished-at="2021-10-04T04:36:49Z">
+        </test-method> <!-- InvalidOTP -->
+        <test-method status="PASS" signature="InvalidNameWithNumbers()[pri:7, instance:signUpTS.signUpTC@56a6d5a6]" name="InvalidNameWithNumbers" duration-ms="19078" started-at="2021-10-04T14:38:46Z" description="Testing Sign up page with inValid number name and valid email(valid login credentials)" depends-on-methods="signUpTS.signUpTC.testUrl" finished-at="2021-10-04T14:39:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testingSearchPageWithValidDetails -->
-        <test-method status="PASS" signature="bookHotelWithNoName()[pri:9, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithNoName" duration-ms="3899" started-at="2021-10-04T04:36:49Z" description="Booking Hotel without entering First or Middle Name" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithValidDetails" finished-at="2021-10-04T04:36:53Z">
+        </test-method> <!-- InvalidNameWithNumbers -->
+        <test-method status="PASS" signature="InvalidNameWithSpecialChar()[pri:8, instance:signUpTS.signUpTC@56a6d5a6]" name="InvalidNameWithSpecialChar" duration-ms="402" started-at="2021-10-04T14:39:05Z" description="Testing Sign up page with inValid special character name and valid email(valid login credentials)" depends-on-methods="signUpTS.signUpTC.InvalidNameWithNumbers" finished-at="2021-10-04T14:39:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookHotelWithNoName -->
-        <test-method status="PASS" signature="bookHotelWithInvalidEmail()[pri:10, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithInvalidEmail" duration-ms="1170" started-at="2021-10-04T04:36:53Z" description="Booking Hotel with invalid email" depends-on-methods="hotelTS.hotelTC.bookHotelWithNoName" finished-at="2021-10-04T04:36:54Z">
+        </test-method> <!-- InvalidNameWithSpecialChar -->
+        <test-method status="PASS" signature="InvalidEmail()[pri:9, instance:signUpTS.signUpTC@56a6d5a6]" name="InvalidEmail" duration-ms="400" started-at="2021-10-04T14:39:05Z" description="Testing Sign up page with Valid name and inValid email(valid login credentials)" depends-on-methods="signUpTS.signUpTC.InvalidNameWithSpecialChar" finished-at="2021-10-04T14:39:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookHotelWithInvalidEmail -->
-        <test-method status="PASS" signature="bookHotelWithValidEmail()[pri:11, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithValidEmail" duration-ms="741" started-at="2021-10-04T04:36:54Z" description="Booking Hotel with invalid Number" depends-on-methods="hotelTS.hotelTC.bookHotelWithInvalidEmail" finished-at="2021-10-04T04:36:55Z">
+        </test-method> <!-- InvalidEmail -->
+        <test-method status="PASS" signature="ValidCredentials()[pri:10, instance:signUpTS.signUpTC@56a6d5a6]" name="ValidCredentials" duration-ms="5830" started-at="2021-10-04T14:39:05Z" description="Testing Sign up page with Valid name and valid email(valid login credentials)" depends-on-methods="signUpTS.signUpTC.InvalidEmail" finished-at="2021-10-04T14:39:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookHotelWithValidEmail -->
-        <test-method status="PASS" signature="bookHotelWithValidDetails()[pri:12, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithValidDetails" duration-ms="726" started-at="2021-10-04T04:36:55Z" description="Booking Hotel with all valid details" depends-on-methods="hotelTS.hotelTC.bookHotelWithValidEmail" finished-at="2021-10-04T04:36:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bookHotelWithValidDetails -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:hotelTS.hotelTC@56a6d5a6]" name="afterTest" is-config="true" duration-ms="684" started-at="2021-10-04T04:36:56Z" finished-at="2021-10-04T04:36:56Z">
+        </test-method> <!-- ValidCredentials -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:signUpTS.signUpTC@56a6d5a6]" name="afterTest" is-config="true" duration-ms="667" started-at="2021-10-04T14:39:11Z" finished-at="2021-10-04T14:39:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- hotelTS.hotelTC -->
+      </class> <!-- signUpTS.signUpTC -->
     </test> <!-- Test -->
-  </suite> <!-- hotelBooking -->
+  </suite> <!-- SignUp -->
 </testng-results>

@@ -4,8 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 
 public class loginElements {
 	WebDriver driver;
@@ -23,8 +22,11 @@ public class loginElements {
 	By e_name = By.xpath("//input[@placeholder='Enter your full name']");
 	By e_email = By.xpath("//input[@placeholder='Enter your email address']");
 	By e_signup= By.xpath("//button[normalize-space()='Lets Go']");
-	//By e_forget = By.linkText("Forgot your password?");
-
+	By e_err1 = By.xpath("//span[@class='header-sprite user-icon gr-append-right5']");
+	By e_errStatus = By.xpath("//p[@class='gr-appendTop10 gr-font12 gr-redText']");
+	By e_err2 = By.xpath("//span[@class='robotoRegular gr-font12 gr-redText']");
+	By e_err3 = By.xpath("//p[contains(@class,'gr-font10 gr-blue-text gr-light gr-helvetica')]");
+			
 	public void clearNumber() {
 		driver.findElement(e_num).clear();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -78,7 +80,33 @@ public class loginElements {
 		driver.findElement(e_signup).click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
-		
-		
+	
+	public boolean checkErr1() {
+		boolean x;
+		x = driver.findElement(e_err1)
+		.isDisplayed();
+		return x;
 	}
+	
+	public String checkErrStatus() {
+		String x;
+		x = driver.findElement(e_errStatus)
+		.getText();
+		return x;
+	}
+	
+	public String checkErr2() {
+		String x;
+		x = driver.findElement(e_err2)
+		.getText();
+		return x;
+	}
+	
+	public boolean checkErr3() {
+		boolean x;
+		x = driver.findElement(e_err3)
+		.isDisplayed();
+		return x;
+	}
+}
 

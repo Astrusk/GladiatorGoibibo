@@ -5,23 +5,45 @@
     <classes>
       <class name="tsMulticityFlight.MulticityFlightTC">
         <methods>
-          <include name="TC45"/>
-          <include name="TC56"/>
-          <include name="TC47"/>
-          <include name="TC46"/>
-          <include name="TC57"/>
+          <include name="NoValidDateForTravel2"/>
+          <include name="NoEmail"/>
+          <include name="NoTitle"/>
+          <include name="NoDestinationCity2"/>
+          <include name="SameFirstAndLastName"/>
+          <include name="InvalidEmail"/>
+          <include name="NoValidDateForTravel1"/>
+          <include name="NoFirstName"/>
+          <include name="ValidCredentials"/>
+          <include name="NoNumber"/>
           <include name="testUrl"/>
-          <include name="TC53"/>
+          <include name="NoLastName"/>
           <include name="afterTest"/>
-          <include name="TC51"/>
-          <include name="TC50"/>
+          <include name="NoDestination"/>
           <include name="beforeTest"/>
-          <include name="TC52"/>
-          <include name="TC44"/>
-          <include name="TC55"/>
-          <include name="TC54"/>
         </methods>
       </class> <!-- tsMulticityFlight.MulticityFlightTC -->
     </classes>
   </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="tsMulticityFlight.MulticityPassengers">
+        <methods>
+          <include name="afterTest"/>
+          <include name="PassengerLimit"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tsMulticityFlight.MulticityPassengers -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" name="Test3(failed)">
+    <classes>
+      <class name="tsMulticityFlight.Passengers2">
+        <methods>
+          <include name="InfantsMoreThanAdults"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tsMulticityFlight.Passengers2 -->
+    </classes>
+  </test> <!-- Test3(failed) -->
 </suite> <!-- Failed suite [multiCity] -->

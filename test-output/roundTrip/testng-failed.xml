@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [roundTrip]">
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="tsRoundTrip.roundTripTC">
+        <methods>
+          <include name="NoDate"/>
+          <include name="NoName"/>
+          <include name="InvalidNumber"/>
+          <include name="NoEmail"/>
+          <include name="NoInsuranceSelected"/>
+          <include name="NoNumber"/>
+          <include name="afterTest"/>
+          <include name="InvalidEmail"/>
+          <include name="NoLocations"/>
+          <include name="NoDestination"/>
+          <include name="beforeTest"/>
+          <include name="NoTitle"/>
+          <include name="ValidNumber"/>
+          <include name="testUrl"/>
+        </methods>
+      </class> <!-- tsRoundTrip.roundTripTC -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [roundTrip] -->

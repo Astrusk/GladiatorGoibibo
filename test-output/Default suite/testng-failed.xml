@@ -3,17 +3,24 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="loginTs.loginTC">
+      <class name="hotelTS.hotelTC">
         <methods>
+          <include name="bookHotelWithInvalidEmail"/>
+          <include name="Url1"/>
+          <include name="bookHotelWithValidDetails"/>
+          <include name="testingSearchPageWithNoRooms"/>
+          <include name="testingSearchPageWithMaxRooms"/>
+          <include name="bookHotelWithNoName"/>
+          <include name="childLimit"/>
+          <include name="testingSearchPageWithMoreThan16Adults"/>
           <include name="afterTest"/>
-          <include name="TC06"/>
-          <include name="TC05"/>
+          <include name="bookHotelWithValidEmail"/>
+          <include name="testingSearchPageWithNoAdults"/>
+          <include name="testingSearchPageWithValidDetails"/>
           <include name="beforeTest"/>
-          <include name="TC07"/>
-          <include name="TC01"/>
-          <include name="testUrl"/>
+          <include name="withoutEnteringLocation"/>
         </methods>
-      </class> <!-- loginTs.loginTC -->
+      </class> <!-- hotelTS.hotelTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

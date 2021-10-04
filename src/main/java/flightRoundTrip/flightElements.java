@@ -35,6 +35,15 @@ public class flightElements {
 	By e_mail = By.xpath("//input[@placeholder='Email']");
 	By e_num = By.xpath("//input[@placeholder='Mobile No']");
 	By e_pay = By.xpath("//button[normalize-space()='Proceed To Payment']");
+	By e_err1 = By.xpath("//div[contains(text(),'Please make sure you enter the Name as per your go')]");
+	By e_err2 = By.xpath("//span[normalize-space()='First & Middle Name is mandatory']");
+	By e_err3 = By.xpath("//div[normalize-space()='Title is mandatory']");
+	By e_err4 = By.xpath("//span[normalize-space()='Email ID cannot be empty']");
+	By e_err5 = By.xpath("//span[normalize-space()='Please enter a valid Email ID']");
+	By e_err6 = By.xpath("//span[normalize-space()='Mobile Number cannot be empty']");
+	By e_err7 = By.xpath("//span[@class='red width100 padT3']");
+	By e_visible = By.xpath("//span[@class='alertText padL5']//strong[contains(text(),'NOTE:')]");
+	By e_err8 = By.xpath("//span[@class='status_cont']");
 	
 	public void clickRound() {
 		driver.findElement(e_round).click();
@@ -144,5 +153,70 @@ public class flightElements {
 
 	public void clickPtopay() {
 		driver.findElement(e_pay).click();
+	}
+	
+	public boolean checkErr1() {
+		boolean x;
+		x = driver
+				.findElement(e_err1)
+				.isDisplayed();
+		
+		return x;
+	}
+	
+	public boolean checkErr2() {
+		boolean x;
+		x = driver.findElement(e_err2)
+		.isDisplayed();
+		return x;
+	}
+	
+	public boolean checkErr3() {
+		boolean x;
+		x = driver.findElement(e_err3)
+		.isDisplayed();
+		return x;
+	}
+	
+	public boolean checkErr4() {
+		boolean x;
+		x = driver.findElement(e_err4)
+		.isDisplayed();
+		return x;
+	}
+	
+	public boolean checkErr5() {
+		boolean x;
+		x = driver.findElement(e_err5)
+		.isDisplayed();
+		return x;
+	}
+	
+	public boolean checkErr6() {
+		boolean x;
+		x = driver.findElement(e_err6)
+		.isDisplayed();
+		return x;
+	}
+	
+	public String checkErr7() {
+		String x;
+		x = driver.findElement(e_err7)
+		.getText();
+		return x;
+	}
+	
+	public boolean checkVisible() {
+		boolean x;
+		x = driver.findElement(e_visible)
+		.isDisplayed();
+		return x;
+	}
+	
+	public String checkErr8() {
+		String x;
+		x = driver.findElement(e_err8)
+		.getText();
+		return x;
 	}
 }

@@ -19,7 +19,7 @@ public class roundTripTC extends base {
 	}
 
 	@Test(priority = 2, dependsOnMethods = "testUrl", description = "Testing round trip Flight with no From and no Destination")
-	public void TC31() throws Exception {
+	public void NoLocations() throws Exception {
 		driver.manage().window().maximize(); // Maximizing window
 
 		flightElements e = new flightElements(driver);
@@ -32,8 +32,8 @@ public class roundTripTC extends base {
 		Assert.assertEquals(actual, "Please enter a valid Source"); // comparing error statemenrts
 	}
 
-	@Test(priority = 3, dependsOnMethods = "TC31", description = "Testing round trip Flight with Valid From and no Destination")
-	public void TC32() throws Exception {
+	@Test(priority = 3, dependsOnMethods = "NoLocations", description = "Testing round trip Flight with Valid From and no Destination")
+	public void NoDestination() throws Exception {
 		driver.manage().window().maximize();
 
 		flightElements e = new flightElements(driver);
@@ -48,8 +48,8 @@ public class roundTripTC extends base {
 		Assert.assertEquals(actual, "Please enter a valid Destination");// comparing errors
 	}
 
-	@Test(priority = 4, dependsOnMethods = "TC32", description = "Testing round trip Flight if no valid date")
-	public void TC33() throws Exception {
+	@Test(priority = 4, dependsOnMethods = "NoDestination", description = "Testing round trip Flight if no valid date")
+	public void NoDate() throws Exception {
 
 		driver.manage().window().maximize();
 
@@ -65,8 +65,8 @@ public class roundTripTC extends base {
 		Assert.assertEquals(actual, "Please enter a valid departure date"); // comparing error statement
 	}
 
-	@Test(priority = 5, dependsOnMethods = "TC33", description = "Booking Flight without selecting Insurance options")
-	public void TC36() throws Exception {
+	@Test(priority = 5, dependsOnMethods = "NoDate", description = "Booking Flight without selecting Insurance options")
+	public void NoInsuranceSelected() throws Exception {
 
 		driver.manage().window().maximize();
 
@@ -79,95 +79,90 @@ public class roundTripTC extends base {
 		e.clickBook();// click book button
 		e.clickProceed();// click proceed button
 
-		boolean x = driver
-				.findElement(By.xpath("//div[contains(text(),'Please make sure you enter the Name as per your go')]"))
-				.isDisplayed();
+		boolean x = e.checkErr1();
 
 		Assert.assertTrue(x);// verifying
 	}
 
-	@Test(priority = 6, dependsOnMethods = "TC36", description = "Booking Flight without entering First or Middle Name")
-	public void TC37() throws Exception {
+	@Test(priority = 6, dependsOnMethods = "NoInsuranceSelected", description = "Booking Flight without entering First or Middle Name")
+	public void NoName() throws Exception {
 		flightElements e = new flightElements(driver);
 
 		e.clickIRisk();// click i'll risk it button
 		e.clickProceed();// click on proceed button
 
-		boolean x = driver.findElement(By.xpath("//span[normalize-space()='First & Middle Name is mandatory']"))
-				.isDisplayed();
+		boolean x = e.checkErr2();
 
 		Assert.assertTrue(x);// verifying
 	}
 
-	@Test(priority = 7, dependsOnMethods = "TC37", description = "Booking Flight without selecting Title")
-	public void TC38() throws Exception {
+	@Test(priority = 7, dependsOnMethods = "NoName", description = "Booking Flight without selecting Title")
+	public void NoTitle() throws Exception {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
 		e.setName(cred.getFirstName());// enter name
 		e.clickProceed();// click on proceed button
 
-		boolean x = driver.findElement(By.xpath("//div[normalize-space()='Title is mandatory']")).isDisplayed();
+		boolean x = e.checkErr3();
 
 		Assert.assertTrue(x);// verifying
 	}
 
-	@Test(priority = 8, dependsOnMethods = "TC38", description = "Booking Flight without entering Email")
-	public void TC39() throws Exception {
+	@Test(priority = 8, dependsOnMethods = "NoTitle", description = "Booking Flight without entering Email")
+	public void NoEmail() throws Exception {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
 		e.selectTitle(cred.getTitledd());// selecting title from drop down
 		e.clickProceed();// click on proceed button
 
-		boolean x = driver.findElement(By.xpath("//span[normalize-space()='Email ID cannot be empty']")).isDisplayed();
+		boolean x = e.checkErr4();
 
 		Assert.assertTrue(x);// verifying
 	}
 
-	@Test(priority = 9, dependsOnMethods = "TC39", description = "Booking Flight with invalid email")
-	public void TC40() throws Exception {
+	@Test(priority = 9, dependsOnMethods = "NoEmail", description = "Booking Flight with invalid email")
+	public void InvalidEmail() throws Exception {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
 		e.setMail(cred.getInvalidEmail());// entering email
 		e.clickProceed();
 
-		boolean x = driver.findElement(By.xpath("//span[normalize-space()='Please enter a valid Email ID']"))
-				.isDisplayed();
+		boolean x = e.checkErr5();
 
 		Assert.assertTrue(x);// verifying
 	}
 
-	@Test(priority = 10, dependsOnMethods = "TC40", description = "Booking Flight with No Number")
-	public void TC41() throws Exception {
+	@Test(priority = 10, dependsOnMethods = "InvalidEmail", description = "Booking Flight with No Number")
+	public void NoNumber() throws Exception {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
 		e.setMail(cred.getValidEmail());
 		e.clickProceed();
 
-		boolean x = driver.findElement(By.xpath("//span[normalize-space()='Mobile Number cannot be empty']"))
-				.isDisplayed();
+		boolean x = e.checkErr6();
 
 		Assert.assertTrue(x);
 	}
 
-	@Test(priority = 11, dependsOnMethods = "TC41", description = "Booking Flight with invalid Number")
-	public void TC42() throws Exception {
+	@Test(priority = 11, dependsOnMethods = "NoNumber", description = "Booking Flight with invalid Number")
+	public void InvalidNumber() throws Exception {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
 		e.setNum(cred.getInvalidNo());// entering number
 		e.clickProceed();
 
-		String err = driver.findElement(By.xpath("//span[@class='red width100 padT3']")).getText();
+		String err = e.checkErr7();
 
 		Assert.assertEquals(err, "Please enter a valid mobile number"); // comparing error statements
 	}
 
-	@Test(priority = 12, dependsOnMethods = "TC42", description = "Booking Flight with valid Number")
-	public void TC43() throws Exception {
+	@Test(priority = 12, dependsOnMethods = "InvalidNumber", description = "Booking Flight with valid Number")
+	public void ValidNumber() throws Exception {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
@@ -187,10 +182,7 @@ public class roundTripTC extends base {
 		e.clickProceed();// click on proceed
 		e.clickPtopay();// click on proceed to pay button
 
-		wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Fee & Surcharge']")));
-		boolean x = driver.findElement(By.xpath("//span[@class='alertText padL5']//strong[contains(text(),'NOTE:')]"))
-				.isDisplayed();// explicitly waiting
+		boolean x = e.checkVisible();// explicitly waiting
 
 		Assert.assertTrue(x);// verifying if element is displayed
 	}

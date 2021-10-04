@@ -3,32 +3,28 @@ package tsMulticityFlight;
 import Base.*;
 import flightMulticity.FlightElements;
 import url.*;
-import flightOneWay.*;
-
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MulticityPassengers extends base {
 
 	@Test(description = "Testing with more than 9 passengers")
-	public void TC48() throws Exception {
+	public void PassengerLimit() throws Exception {
 
 		Url u = new Url();
-		String site = u.getUrl();
-		driver.get(site);
+		String site = u.getUrl();//get url 
+		driver.get(site);//visit url
 
 		driver.manage().window().maximize();
 
 		FlightElements e = new FlightElements(driver);
 		e.select();
-		e.clickPax();
-		e.setAdult(9);
-		e.setChild(2);
+		e.clickPax();//select passengers
+		e.setAdult(9);//set number of adults
+		e.setChild(2);//set number of children
 
-		String actual = driver.findElement(By.xpath("//span[@class='status_cont']")).getText();
+		String actual = e.checkPassErr();//check error statement
 
-		Assert.assertEquals(actual, "Maximum of 9 travellers allowed");
-		Thread.sleep(2000);
+		Assert.assertEquals(actual, "Maximum of 9 travellers allowed");//compare statement
 	}
 }

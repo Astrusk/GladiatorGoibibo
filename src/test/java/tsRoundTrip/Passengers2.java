@@ -3,15 +3,13 @@ package tsRoundTrip;
 import Base.*;
 import url.*;
 import flightRoundTrip.*;
-
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Passengers2 extends base {
 
 	@Test(description = "Testing with Infants more than Adults")
-	public void TC35() throws Exception {
+	public void InfantsMoreThanAdults() throws Exception {
 
 		Url u = new Url();
 		String site = u.getUrl();// getting url
@@ -25,8 +23,8 @@ public class Passengers2 extends base {
 		e.clickPax();// click passengers button
 		e.setInfant(3);// select number of infants
 
-		String actual = driver.findElement(By.xpath("//span[@class='status_cont']")).getText();// getting text from web
-																								// elemnent
+		String actual = e.checkErr8();// getting text from web element
+																						
 
 		Assert.assertEquals(actual, "Number of infants cannot be more than adults");// comparing error statements
 	}

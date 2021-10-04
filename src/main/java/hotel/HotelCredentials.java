@@ -1,6 +1,4 @@
 package hotel;
-import java.io.*;
-import java.util.*;
 
 import java.io.FileInputStream;
 import java.util.Properties;
