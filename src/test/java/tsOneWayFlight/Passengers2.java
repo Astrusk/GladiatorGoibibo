@@ -14,19 +14,20 @@ public class Passengers2 extends base {
 	public void TC22() throws Exception {
 
 		Url u = new Url();
-		String site = u.getUrl();
-		driver.get(site);
+		String site = u.getUrl();// getting url
+		driver.get(site);// visiting url
 
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();// maximizing window
 
 		flightElements e = new flightElements(driver);
 
-		e.clickPax();
-		e.setInfant(3);
+		e.clickPax();// clicking passengers button
+		e.setInfant(3);// entering number of infants
 
-		String actual = driver.findElement(By.xpath("//span[@class='status_cont']")).getText();
+		String actual = driver.findElement(By.xpath("//span[@class='status_cont']")).getText(); // getting text from
+																								// element
 
-		Assert.assertEquals(actual, "Number of infants cannot be more than adults");
+		Assert.assertEquals(actual, "Number of infants cannot be more than adults"); // comparing errors
 	}
 
 }

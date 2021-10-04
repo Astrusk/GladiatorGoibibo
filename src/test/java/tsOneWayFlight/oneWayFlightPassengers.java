@@ -14,19 +14,20 @@ public class oneWayFlightPassengers extends base {
 	public void TC21() throws Exception {
 
 		Url u = new Url();
-		String site = u.getUrl();
-		driver.get(site);
+		String site = u.getUrl();// getting url
+		driver.get(site);// visiting url
 
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();// maximizing window
 
 		flightElements e = new flightElements(driver);
 
-		e.clickPax();
-		e.setAdult(9);
-		e.setChild(2);
+		e.clickPax();// clicking passenger button
+		e.setAdult(9);// selecting number of adults
+		e.setChild(2);// selecting number of children
 
-		String actual = driver.findElement(By.xpath("//span[@class='status_cont']")).getText();
+		String actual = driver.findElement(By.xpath("//span[@class='status_cont']")).getText();// getting text from
+																								// element
 
-		Assert.assertEquals(actual, "Maximum of 9 travellers allowed");
+		Assert.assertEquals(actual, "Maximum of 9 travellers allowed");// comparing error statements
 	}
 }

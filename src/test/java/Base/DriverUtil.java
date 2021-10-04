@@ -2,7 +2,6 @@ package Base;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -37,7 +36,6 @@ public class DriverUtil {
 			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
 			return new FirefoxDriver();
 		}
-
 		else return null;
 	}
 }

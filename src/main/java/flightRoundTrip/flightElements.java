@@ -20,13 +20,14 @@ public class flightElements {
 	By e_from = By.xpath("//input[@id='gosuggest_inputSrc']");
 	By e_to = By.xpath("//input[@id='gosuggest_inputDest']");
 	By e_search = By.xpath("//button[normalize-space()='SEARCH']");
-	By e_dep = By.xpath("//div[@aria-label='Sun Oct 17 2021']");
+	By e_dep = By.xpath("//div[@id='fare_20211017']");
+	By e_ret = By.xpath("//div[@id='fare_20211022']");
 	By e_pax = By.xpath("//div[@id='pax_link_common']");
 	By e_adult = By.xpath("//button[@id='adultPaxPlus']");
 	By e_child = By.xpath("//button[@id='childPaxPlus']");
 	By e_infant = By.xpath("//button[@id='infantPaxPlus']");
 	By e_proceed = By.xpath("//button[normalize-space()='Proceed']");
-	By e_book = By.xpath("//*[contains(text(), 'BOOK')]");
+	By e_book = By.xpath("//input[@value='BOOK']");
 	By e_flightErrStatus = By.xpath("//span[@class='status_cont red ico13']");
 	By e_risk = By.cssSelector(
 			".dweb-commonstyles__ButtonBase-sc-13fxsy5-4.dweb-commonstyles__InsuranceButton-sc-13fxsy5-5.dweb-commonstyles__InsuranceUnselectButton-sc-13fxsy5-7.ggCItP.NqvXb.jpQHoV");
@@ -74,9 +75,16 @@ public class flightElements {
 	}
 
 	public void setDep() {
+		
+		driver.findElements(By.xpath("//input[@id='departureCalendar']"));
 		driver.findElement(e_dep).click();
 	}
 
+	public void setRet() {
+		driver.findElements(By.xpath("//input[@id='returnCalendar']"));
+		driver.findElement(e_ret).click();
+	}
+	
 	public void clickPax() {
 		driver.findElement(e_pax).click();
 	}
@@ -132,8 +140,6 @@ public class flightElements {
 	public void setNum(String num) {
 		driver.findElement(e_num).clear();
 		driver.findElement(e_num).sendKeys(num);
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-
 	}
 
 	public void clickPtopay() {

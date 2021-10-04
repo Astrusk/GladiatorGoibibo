@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9284" started-at="2021-10-01T07:40:07Z" finished-at="2021-10-01T07:40:17Z">
+  <suite name="hotelBooking" duration-ms="20828" started-at="2021-10-04T04:36:36Z" finished-at="2021-10-04T04:36:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9284" started-at="2021-10-01T07:40:07Z" finished-at="2021-10-01T07:40:17Z">
-      <class name="tsOneWayFlight.Passengers2">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:tsOneWayFlight.Passengers2@309e345f]" name="beforeTest" is-config="true" duration-ms="4128" started-at="2021-10-01T07:40:07Z" finished-at="2021-10-01T07:40:11Z">
+    <test name="Test" duration-ms="20828" started-at="2021-10-04T04:36:36Z" finished-at="2021-10-04T04:36:56Z">
+      <class name="hotelTS.hotelTC">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:hotelTS.hotelTC@56a6d5a6]" name="beforeTest" is-config="true" duration-ms="1444" started-at="2021-10-04T04:36:36Z" finished-at="2021-10-04T04:36:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TC22()[pri:0, instance:tsOneWayFlight.Passengers2@309e345f]" name="TC22" duration-ms="4272" started-at="2021-10-01T07:40:11Z" description="Testing with Infants more than Adults" finished-at="2021-10-01T07:40:16Z">
+        <test-method status="PASS" signature="Url1()[pri:1, instance:hotelTS.hotelTC@56a6d5a6]" name="Url1" duration-ms="2869" started-at="2021-10-04T04:36:37Z" finished-at="2021-10-04T04:36:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC22 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:tsOneWayFlight.Passengers2@309e345f]" name="afterTest" is-config="true" duration-ms="866" started-at="2021-10-01T07:40:16Z" finished-at="2021-10-01T07:40:17Z">
+        </test-method> <!-- Url1 -->
+        <test-method status="PASS" signature="withoutEnteringLocation()[pri:2, instance:hotelTS.hotelTC@56a6d5a6]" name="withoutEnteringLocation" duration-ms="1588" started-at="2021-10-04T04:36:40Z" description="Without entering Location" depends-on-methods="hotelTS.hotelTC.Url1" finished-at="2021-10-04T04:36:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withoutEnteringLocation -->
+        <test-method status="PASS" signature="testingSearchPageWithNoRooms()[pri:3, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithNoRooms" duration-ms="3515" started-at="2021-10-04T04:36:42Z" description="Testing Search page with no rooms" depends-on-methods="hotelTS.hotelTC.withoutEnteringLocation" finished-at="2021-10-04T04:36:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingSearchPageWithNoRooms -->
+        <test-method status="PASS" signature="testingSearchPageWithNoAdults()[pri:4, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithNoAdults" duration-ms="140" started-at="2021-10-04T04:36:45Z" description="Testing Search page with no adults" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithNoRooms" finished-at="2021-10-04T04:36:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingSearchPageWithNoAdults -->
+        <test-method status="PASS" signature="testingSearchPageWithMaxRooms()[pri:5, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithMaxRooms" duration-ms="2810" started-at="2021-10-04T04:36:45Z" description="Testing Search page with max rooms" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithNoAdults" finished-at="2021-10-04T04:36:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingSearchPageWithMaxRooms -->
+        <test-method status="PASS" signature="testingSearchPageWithMoreThan16Adults()[pri:6, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithMoreThan16Adults" duration-ms="608" started-at="2021-10-04T04:36:48Z" description="Testing Search page with more than 16 adults" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithMaxRooms" finished-at="2021-10-04T04:36:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingSearchPageWithMoreThan16Adults -->
+        <test-method status="PASS" signature="childLimit()[pri:7, instance:hotelTS.hotelTC@56a6d5a6]" name="childLimit" duration-ms="107" started-at="2021-10-04T04:36:49Z" description="child limit" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithMoreThan16Adults" finished-at="2021-10-04T04:36:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- childLimit -->
+        <test-method status="PASS" signature="testingSearchPageWithValidDetails()[pri:8, instance:hotelTS.hotelTC@56a6d5a6]" name="testingSearchPageWithValidDetails" duration-ms="491" started-at="2021-10-04T04:36:49Z" description="Testing Search page with valid details" depends-on-methods="hotelTS.hotelTC.childLimit" finished-at="2021-10-04T04:36:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingSearchPageWithValidDetails -->
+        <test-method status="PASS" signature="bookHotelWithNoName()[pri:9, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithNoName" duration-ms="3899" started-at="2021-10-04T04:36:49Z" description="Booking Hotel without entering First or Middle Name" depends-on-methods="hotelTS.hotelTC.testingSearchPageWithValidDetails" finished-at="2021-10-04T04:36:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookHotelWithNoName -->
+        <test-method status="PASS" signature="bookHotelWithInvalidEmail()[pri:10, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithInvalidEmail" duration-ms="1170" started-at="2021-10-04T04:36:53Z" description="Booking Hotel with invalid email" depends-on-methods="hotelTS.hotelTC.bookHotelWithNoName" finished-at="2021-10-04T04:36:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookHotelWithInvalidEmail -->
+        <test-method status="PASS" signature="bookHotelWithValidEmail()[pri:11, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithValidEmail" duration-ms="741" started-at="2021-10-04T04:36:54Z" description="Booking Hotel with invalid Number" depends-on-methods="hotelTS.hotelTC.bookHotelWithInvalidEmail" finished-at="2021-10-04T04:36:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookHotelWithValidEmail -->
+        <test-method status="PASS" signature="bookHotelWithValidDetails()[pri:12, instance:hotelTS.hotelTC@56a6d5a6]" name="bookHotelWithValidDetails" duration-ms="726" started-at="2021-10-04T04:36:55Z" description="Booking Hotel with all valid details" depends-on-methods="hotelTS.hotelTC.bookHotelWithValidEmail" finished-at="2021-10-04T04:36:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookHotelWithValidDetails -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:hotelTS.hotelTC@56a6d5a6]" name="afterTest" is-config="true" duration-ms="684" started-at="2021-10-04T04:36:56Z" finished-at="2021-10-04T04:36:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- tsOneWayFlight.Passengers2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- hotelTS.hotelTC -->
+    </test> <!-- Test -->
+  </suite> <!-- hotelBooking -->
 </testng-results>

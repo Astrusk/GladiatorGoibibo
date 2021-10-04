@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [flightsRoundTrip_Firefox]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="tsRoundTrip.roundTripTC">
+        <methods>
+          <include name="TC36"/>
+          <include name="TC39"/>
+          <include name="TC37"/>
+          <include name="TC38"/>
+          <include name="TC33"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="TC31"/>
+          <include name="TC42"/>
+          <include name="testUrl"/>
+          <include name="TC32"/>
+          <include name="TC43"/>
+          <include name="TC40"/>
+          <include name="TC41"/>
+        </methods>
+      </class> <!-- tsRoundTrip.roundTripTC -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="tsRoundTrip.Passengers2">
+        <methods>
+          <include name="afterTest"/>
+          <include name="TC35"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tsRoundTrip.Passengers2 -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [flightsRoundTrip_Firefox] -->

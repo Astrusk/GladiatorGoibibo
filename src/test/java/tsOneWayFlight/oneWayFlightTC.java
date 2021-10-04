@@ -13,38 +13,38 @@ public class oneWayFlightTC extends base {
 
 	@Test(priority = 1)
 	public void testUrl() {
-		Url u = new Url();
+		Url u = new Url(); // getting url
 		String site = u.getUrl();
-		driver.get(site);
+		driver.get(site); // visiting url
 	}
 
 	@Test(priority = 2, dependsOnMethods = "testUrl", description = "Testing One Way Flight with no From and no Destination")
 	public void TC18() throws Exception {
-		driver.manage().window().maximize();
+		driver.manage().window().maximize(); // maximizing window
 
 		flightElements e = new flightElements(driver);
 
-		e.clickSearch();
+		e.clickSearch(); // click search button
 
 		String actual = e.errStatus();
 
-		Assert.assertEquals(actual, "Please enter a valid Source");
+		Assert.assertEquals(actual, "Please enter a valid Source"); // comparing error
 	}
 
 	@Test(priority = 3, dependsOnMethods = "TC18", description = "Testing One Way Flight with Valid From and no Destination")
 	public void TC19() throws Exception {
-		driver.manage().window().maximize();
+		driver.manage().window().maximize(); // maximizing window
 
-		flightElements e = new flightElements(driver);
-		flightCredentials cred = new flightCredentials();
+		flightElements e = new flightElements(driver); /* creating class objects */
+		flightCredentials cred = new flightCredentials(); /* creating class objects */
 
-		e.setFrom(cred.getFromCity());
+		e.setFrom(cred.getFromCity()); // enter from city
 
-		e.clickSearch();
+		e.clickSearch(); // click search button
 
 		String actual = e.errStatus();
 
-		Assert.assertEquals(actual, "Please enter a valid Destination");
+		Assert.assertEquals(actual, "Please enter a valid Destination"); // comparing error
 	}
 
 	@Test(priority = 4, dependsOnMethods = "TC19", description = "Testing One Way Flight if no valid date")
@@ -55,13 +55,13 @@ public class oneWayFlightTC extends base {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
-		e.setTo(cred.getToCity());
+		e.setTo(cred.getToCity()); // entering destination city
 
-		e.clickSearch();
+		e.clickSearch(); // click search button
 
 		String actual = e.errStatus();
 
-		Assert.assertEquals(actual, "Please enter a valid departure date");
+		Assert.assertEquals(actual, "Please enter a valid departure date"); // comparing error
 	}
 
 	@Test(priority = 5, dependsOnMethods = "TC20", description = "Booking Flight without selecting Insurance options")
@@ -70,31 +70,31 @@ public class oneWayFlightTC extends base {
 		driver.manage().window().maximize();
 
 		flightElements e = new flightElements(driver);
-		
-		e.setDep();
 
-		e.clickSearch();
-		e.clickBook();
-		e.clickProceed();
+		e.setDep(); // selecting departure date
+
+		e.clickSearch(); // clicking search button
+		e.clickBook(); // clicking book button
+		e.clickProceed(); // clicking proceed button
 
 		boolean x = driver
 				.findElement(By.xpath("//div[contains(text(),'Please make sure you enter the Name as per your go')]"))
 				.isDisplayed();
 
-		Assert.assertTrue(x);
+		Assert.assertTrue(x); // verifying if element is displayed
 	}
 
 	@Test(priority = 6, dependsOnMethods = "TC23", description = "Booking Flight without entering First or Middle Name")
 	public void TC24() throws Exception {
 		flightElements e = new flightElements(driver);
 
-		e.clickIRisk();
-		e.clickProceed();
+		e.clickIRisk(); // clicking i'll risk it button
+		e.clickProceed(); // clicking proceed button
 
 		boolean x = driver.findElement(By.xpath("//span[normalize-space()='First & Middle Name is mandatory']"))
 				.isDisplayed();
 
-		Assert.assertTrue(x);
+		Assert.assertTrue(x); // verifying
 	}
 
 	@Test(priority = 7, dependsOnMethods = "TC24", description = "Booking Flight without selecting Title")
@@ -102,12 +102,12 @@ public class oneWayFlightTC extends base {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
-		e.setName(cred.getFirstName());
-		e.clickProceed();
+		e.setName(cred.getFirstName()); // entering name
+		e.clickProceed(); // clicking on proceed
 
 		boolean x = driver.findElement(By.xpath("//div[normalize-space()='Title is mandatory']")).isDisplayed();
 
-		Assert.assertTrue(x);
+		Assert.assertTrue(x); // verifying
 	}
 
 	@Test(priority = 7, dependsOnMethods = "TC25", description = "Booking Flight without entering Email")
@@ -115,12 +115,12 @@ public class oneWayFlightTC extends base {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
-		e.selectTitle(cred.getTitledd());
-		e.clickProceed();
+		e.selectTitle(cred.getTitledd()); // selecting title from drop down
+		e.clickProceed(); // clicking proceed
 
 		boolean x = driver.findElement(By.xpath("//span[normalize-space()='Email ID cannot be empty']")).isDisplayed();
 
-		Assert.assertTrue(x);
+		Assert.assertTrue(x); // verifying
 	}
 
 	@Test(priority = 8, dependsOnMethods = "TC26", description = "Booking Flight with invalid email")
@@ -128,13 +128,13 @@ public class oneWayFlightTC extends base {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
-		e.setMail(cred.getInvalidEmail());
-		e.clickProceed();
+		e.setMail(cred.getInvalidEmail()); // entering e-mail
+		e.clickProceed(); // clicking proceed button
 
 		boolean x = driver.findElement(By.xpath("//span[normalize-space()='Please enter a valid Email ID']"))
 				.isDisplayed();
 
-		Assert.assertTrue(x);
+		Assert.assertTrue(x); // verifying
 	}
 
 	@Test(priority = 9, dependsOnMethods = "TC27", description = "Booking Flight with No Number")
@@ -156,12 +156,12 @@ public class oneWayFlightTC extends base {
 		flightElements e = new flightElements(driver);
 		flightCredentials cred = new flightCredentials();
 
-		e.setNum(cred.getInvalidNo());
-		e.clickProceed();
+		e.setNum(cred.getInvalidNo()); // entering number
+		e.clickProceed(); // clicking proceed button
 
 		String err = driver.findElement(By.xpath("//span[@class='red width100 padT3']")).getText();
 
-		Assert.assertEquals(err, "Please enter a valid mobile number");
+		Assert.assertEquals(err, "Please enter a valid mobile number"); // comparing error
 	}
 
 	@Test(priority = 11, dependsOnMethods = "TC29", description = "Booking Flight with valid Number")
@@ -172,15 +172,25 @@ public class oneWayFlightTC extends base {
 		e.setNum(cred.getValidNo());
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Fee & Surcharge']")));
-		Thread.sleep(1000);
-		
-		e.clickProceed();
-		e.clickPtopay();
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Fee & Surcharge']"))); // explicitly
+																															// waiting
+																															// for
+																															// element
+																															// to
+																															// be
+																															// visible
+		Thread.sleep(1000); // pausing thread execution
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Fee & Surcharge']")));
-		boolean x = driver.findElement(By.xpath("//span[@class='alertText padL5']//strong[contains(text(),'NOTE:')]")).isDisplayed();
+		e.clickProceed(); // clicking proceed button
+		e.clickPtopay(); // clicking proceed to pay button
 
-		Assert.assertTrue(x);
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Fee & Surcharge']"))); // explicit
+																															// wait
+		boolean x = driver.findElement(By.xpath("//span[@class='alertText padL5']//strong[contains(text(),'NOTE:')]"))
+				.isDisplayed();
+
+		Assert.assertTrue(x); // verifying presence of element
 	}
 }

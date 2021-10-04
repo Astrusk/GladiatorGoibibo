@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>TestNG:  Test3</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test3</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 01 15:08:58 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>24 seconds (24367 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC18()'><b>TC18</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Testing One Way Flight with no From and no Destination</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC19()'><b>TC19</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Testing One Way Flight with Valid From and no Destination</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC20()'><b>TC20</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Testing One Way Flight if no valid date</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC23()'><b>TC23</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight without selecting Insurance options</td>
+<td></td>
+<td>3</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC24()'><b>TC24</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight without entering First or Middle Name</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC25()'><b>TC25</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight without selecting Title</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC26()'><b>TC26</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight without entering Email</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC27()'><b>TC27</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight with invalid email</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC28()'><b>TC28</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight with No Number</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC29()'><b>TC29</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight with invalid Number</td>
+<td></td>
+<td>0</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.TC30()'><b>TC30</b><br>Test class: tsOneWayFlight.oneWayFlightTC<br>Test method: Booking Flight with valid Number</td>
+<td></td>
+<td>9</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+<tr>
+<td title='tsOneWayFlight.oneWayFlightTC.testUrl()'><b>testUrl</b><br>Test class: tsOneWayFlight.oneWayFlightTC</td>
+<td></td>
+<td>2</td>
+<td>tsOneWayFlight.oneWayFlightTC@6e0dec4a</td></tr>
+</table><p>
+</body>
+</html>

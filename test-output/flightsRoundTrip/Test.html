@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Oct 01 16:06:59 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>31 seconds (31719 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC32()'><b>TC32</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Testing round trip Flight with no From and no Destination</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC33()'><b>TC33</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Testing round trip Flight with Valid From and no Destination</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC34()'><b>TC34</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Testing round trip Flight if no valid date</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC37()'><b>TC37</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight without selecting Insurance options</td>
+<td></td>
+<td>3</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC38()'><b>TC38</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight without entering First or Middle Name</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC39()'><b>TC39</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight without selecting Title</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC40()'><b>TC40</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight without entering Email</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC41()'><b>TC41</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight with invalid email</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC42()'><b>TC42</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight with No Number</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC43()'><b>TC43</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight with invalid Number</td>
+<td></td>
+<td>0</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.TC44()'><b>TC44</b><br>Test class: tsRoundTrip.roundTripTC<br>Test method: Booking Flight with valid Number</td>
+<td></td>
+<td>15</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+<tr>
+<td title='tsRoundTrip.roundTripTC.testUrl()'><b>testUrl</b><br>Test class: tsRoundTrip.roundTripTC</td>
+<td></td>
+<td>2</td>
+<td>tsRoundTrip.roundTripTC@56a6d5a6</td></tr>
+</table><p>
+</body>
+</html>
